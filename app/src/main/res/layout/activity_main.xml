@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity"
+    android:id="@+id/mainLayout">
+
+    <LinearLayout
+        android:id="@+id/Top_Title"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <ImageButton
+            android:id="@+id/ImgBtn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:focusableInTouchMode="true"
+            android:src="@drawable/back_icon"></ImageButton>
+
+        <TextView
+            android:id="@+id/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20"
+            android:layout_margin="10dp"
+            android:minHeight="48dp"
+            android:text="Fitness Potential"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/Btn_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:text="설정" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Routine_card_layout"
+        android:layout_width="match_parent"
+        android:layout_height="257dp">
+
+        <HorizontalScrollView
+            android:id="@+id/routine_cards"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/routine_card1"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:text="루틴 카드1"
+                    android:textAlignment="center"></TextView>
+
+                <TextView
+                    android:id="@+id/routine_card2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:text="루틴 카드2"
+                    android:textAlignment="center"></TextView>
+
+                <TextView
+                    android:id="@+id/routine_card3"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:text="루틴 카드3"
+                    android:textAlignment="center"></TextView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/diet_routine_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Btn_diet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="식단"
+            android:textAlignment="center"></Button>
+
+        <Button
+            android:id="@+id/Btn_addRoutine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="루틴 추가"
+            android:textAlignment="center"></Button>
+
+        <Button
+            android:id="@+id/Btn_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="운동 정보"
+            android:textAlignment="center"></Button>
+    </LinearLayout>
+
+</LinearLayout>

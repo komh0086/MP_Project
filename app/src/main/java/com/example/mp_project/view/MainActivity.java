@@ -21,7 +21,7 @@ import com.example.mp_project.view.component.RoutineCard;
 public class MainActivity extends AppCompatActivity {
     public static Context mycontext;
     ImageButton Btn_myInfo;
-    Button Btn_addRoutine;
+    Button Btn_addRoutine, Btn_dietInfo;
     LinearLayout routine_card_layout;
     LayoutInflater mInflater;
     @Override
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void find(){
+        Btn_dietInfo = (Button) findViewById(R.id.Btn_diet);
         Btn_addRoutine = (Button) findViewById(R.id.Btn_addRoutine);
         Btn_myInfo = (ImageButton) findViewById(R.id.Btn_myInfo);
         routine_card_layout = (LinearLayout) findViewById(R.id.routine_card_layout);
@@ -55,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AddRoutine.class);
+                startActivity(intent);
+            }
+        });
+        Btn_dietInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), DietInfo.class);
                 startActivity(intent);
             }
         });

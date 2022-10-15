@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.AddRoutine"/>
+        <activity android:name=".view.DietInfo" />
     </application>
 
 </manifest>

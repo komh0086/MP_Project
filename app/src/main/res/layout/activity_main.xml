@@ -75,14 +75,16 @@
             android:id="@+id/Btn_diet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="식단 정보 보기"
-            android:background="@drawable/button_selector"
-            android:textColor="@color/black"
-            android:layout_margin="10dp"
-            android:padding="40dp"
-            android:elevation="100dp"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_margin="10dp"
+            android:background="@drawable/button_selector"
+            android:elevation="100dp"
+            android:padding="40dp"
+            android:text="식단 정보 보기"
+            android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Btn_addRoutine"

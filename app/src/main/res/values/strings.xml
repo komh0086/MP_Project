@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MP_Project</string>
+    <string name="go_back">뒤로가기</string>
+    <string name="chest">가슴</string>
+    <string name="back">등</string>
+    <string name="shoulder">어깨</string>
+    <string name="ceps">이삼두</string>
+    <string name="lower">하체</string>
+    <string name="core">코어</string>
+    <string name="aerobic">유산소</string>
+    <string name="fitness_info">운동 정보</string>
+    <string name="diet_info">식단정보</string>
+    <string name="add_routine">루틴 추가</string>
 </resources>

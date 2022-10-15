@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 
 public class AddRoutine  extends AppCompatActivity {
 
+    ImageButton btn_goback;
     EditText routine_name, routine_set, routine_count;
     Button btn_addFitness, btn_saveRoutine;
     ListView fitness_array;
@@ -32,6 +34,7 @@ public class AddRoutine  extends AppCompatActivity {
     }
 
     private void find(){
+        btn_goback = (ImageButton) findViewById(R.id.btn_goback_addroutine);
         fitness_array = (ListView) findViewById(R.id.fitness_array);
         routine_name = (EditText) findViewById(R.id.add_fitness_name);
         routine_set = (EditText) findViewById(R.id.routine_set);
@@ -52,6 +55,12 @@ public class AddRoutine  extends AppCompatActivity {
     }
 
     private void setListener(){
+        btn_goback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         btn_addFitness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

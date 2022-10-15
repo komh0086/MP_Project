@@ -101,18 +101,18 @@
             android:layout_rowWeight="1"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Btn_info"
+            android:id="@+id/Btn_fitness_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="운동 정보 보기"
-            android:background="@drawable/button_selector"
-            android:textColor="@color/black"
-            android:layout_column="0"
             android:layout_row="1"
-            android:layout_margin="10dp"
-            android:padding="40dp"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1"/>
+            android:layout_margin="10dp"
+            android:background="@drawable/button_selector"
+            android:padding="40dp"
+            android:text="운동 정보 보기"
+            android:textColor="@color/black" />
     </GridLayout>
 
 </LinearLayout>

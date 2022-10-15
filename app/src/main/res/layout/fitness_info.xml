@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_goback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="#00000000"
+            android:src="@drawable/back_icon_vector"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:layout_weight="30"
+            android:text="@string/fitness_info"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/tab_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_chest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold"
+                    android:text="@string/chest"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold"
+                    android:text="@string/back"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_shoulder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:text="@string/shoulder"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_ceps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold"
+                    android:text="@string/ceps"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_lower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold"
+                    android:text="@string/lower"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_core"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold"
+                    android:text="@string/core"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/Btn_aerobic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/fitness_selector"
+                    android:textColor="#A0A0A0"
+                    android:textStyle="bold"
+                    android:text="@string/aerobic"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layout_chest"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chest"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_back"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_shoulder"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoulder"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_ceps"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ceps"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_lower"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lower"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_core"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/core"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_aerobic"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/aerobic"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

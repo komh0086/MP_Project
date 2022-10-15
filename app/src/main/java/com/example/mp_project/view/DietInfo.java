@@ -5,6 +5,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.mp_project.R;
 
 public class DietInfo extends AppCompatActivity {
-    Button Btn_goback;
+    ImageButton Btn_goback;
     EditText search_diet;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,7 @@ public class DietInfo extends AppCompatActivity {
     }
 
     private void find(){
-        Btn_goback = (Button)findViewById(R.id.Btn_goback);
+        Btn_goback = (ImageButton) findViewById(R.id.Btn_goback);
         search_diet = (EditText) findViewById(R.id.search_diet);
     }
 

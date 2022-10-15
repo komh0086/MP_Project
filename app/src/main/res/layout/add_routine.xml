@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:backgroundTint="@color/root_background">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -12,26 +13,89 @@
         android:textStyle="bold"
         android:textSize="30dp"
         android:layout_margin="10dp"/>
-    <EditText
-        android:id="@+id/routine_name"
+
+    <LinearLayout
+        android:background="@drawable/routine_card_bg"
+        android:id="@+id/routine_card"
+        android:layout_width="350dp"
+        android:layout_height="200dp">
+
+        <EditText
+            android:id="@+id/add_routine_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#00000000"
+            android:hint="루틴 이름을 \n입력하세요"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:textColor="#FFFFFF"/>
+
+        <ListView
+            android:id="@+id/add_fitness_array"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="#00000000" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="루틴 이름을 입력하세요"
-        android:textAlignment="center"
-        />
-    <Button
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="운동 이름"/>
+        <EditText
+            android:id="@+id/add_fitness_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="100dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="세트 수" />
+
+        <EditText
+            android:id="@+id/routine_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="횟수" />
+
+        <EditText
+            android:id="@+id/routine_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="50dp"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_addFitness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="운동 추가하기"
-        />
-    <Button
+        android:textColor="@color/black"
+        android:background="@drawable/button_selector"
+        android:elevation="50dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_saveRoutine"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_selector"
+        android:textColor="@color/black"
         android:text="저장하기"
-        android:layout_margin="10dp"
-        />
+        android:layout_margin="10dp" />
 
 </LinearLayout>

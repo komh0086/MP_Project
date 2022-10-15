@@ -19,9 +19,8 @@ import com.example.mp_project.domain.routine.RoutineEntity;
 import com.example.mp_project.view.component.RoutineCard;
 
 public class MainActivity extends AppCompatActivity {
-//    RoutineDB routineDB = RoutineDB.getInstance(getApplicationContext());
     public static Context mycontext;
-    ImageButton Btn_back;
+    ImageButton Btn_myInfo;
     Button Btn_addRoutine;
     LinearLayout routine_card_layout;
     LayoutInflater mInflater;
@@ -41,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void find(){
         Btn_addRoutine = (Button) findViewById(R.id.Btn_addRoutine);
-        Btn_back = (ImageButton) findViewById(R.id.ImgBtn_back);
+        Btn_myInfo = (ImageButton) findViewById(R.id.Btn_myInfo);
         routine_card_layout = (LinearLayout) findViewById(R.id.routine_card_layout);
     }
 
     private void setListener(){
-        Btn_back.setOnClickListener(new View.OnClickListener() {
+        Btn_myInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 System.exit(0);
@@ -55,9 +54,6 @@ public class MainActivity extends AppCompatActivity {
         Btn_addRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                RoutineEntity test = new RoutineEntity();
-//                RoutineDAO dao = routineDB.routineDAO();
-//                dao.insert(test);
                 Intent intent = new Intent(getApplicationContext(), AddRoutine.class);
                 startActivity(intent);
             }

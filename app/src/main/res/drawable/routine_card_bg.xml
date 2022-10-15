@@ -7,6 +7,5 @@
         android:endColor="#4BD2F3"
         android:startColor="#427EEC" />
     <corners android:radius="10dp"/>
-    <stroke android:color="@color/black"/>
 
 </shape>

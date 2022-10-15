@@ -5,20 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.MainActivity"
-    android:id="@+id/mainLayout">
+    android:id="@+id/mainLayout"
+    android:background="@color/root_background">
 
     <LinearLayout
         android:id="@+id/Top_Title"
         android:layout_width="match_parent"
         android:layout_height="66dp">
-
-        <ImageButton
-            android:id="@+id/ImgBtn_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:focusableInTouchMode="true"
-            android:src="@drawable/back_icon"></ImageButton>
 
         <TextView
             android:id="@+id/Title"
@@ -28,17 +21,21 @@
             android:layout_margin="10dp"
             android:minHeight="48dp"
             android:text="Fitness Potential"
+            android:gravity="center"
             android:textAlignment="center"
             android:textSize="20dp"
             android:textStyle="bold"/>
 
-        <Button
-            android:id="@+id/Btn_config"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+        <ImageButton
+            android:id="@+id/Btn_myInfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_margin="10dp"
-            android:text="설정" />
+            android:focusableInTouchMode="true"
+            android:src="@drawable/user_img"
+            android:scaleType="centerCrop"
+            android:padding="0sp"/>
+
     </LinearLayout>
 
     <HorizontalScrollView
@@ -46,41 +43,74 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:orientation="horizontal">
+
         <LinearLayout
             android:id="@+id/routine_card_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="363dp"
+                android:layout_height="211dp"
+                android:gravity="center"
+                android:text="루틴을 추가해주세요!"
+                android:textSize="15dp"
+                android:background="@drawable/routine_card_bg"/>
         </LinearLayout>
+
     </HorizontalScrollView>
 
-    <LinearLayout
+    <GridLayout
         android:id="@+id/diet_routine_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:columnOrderPreserved="false"
         android:orientation="vertical">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Btn_diet"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="식단"
-            android:textAlignment="center"></Button>
+            android:text="식단 정보 보기"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:padding="40dp"
+            android:elevation="100dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Btn_addRoutine"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="루틴 추가"
-            android:textAlignment="center"></Button>
+            android:text="루틴 추가하기"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/black"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:layout_margin="10dp"
+            android:padding="40dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/Btn_info"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="운동 정보"
-            android:textAlignment="center"></Button>
-    </LinearLayout>
+            android:text="운동 정보 보기"
+            android:background="@drawable/button_selector"
+            android:textColor="@color/black"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_margin="10dp"
+            android:padding="40dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"/>
+    </GridLayout>
 
 </LinearLayout>

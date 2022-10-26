@@ -11,4 +11,5 @@
     <string name="fitness_info">운동 정보</string>
     <string name="diet_info">식단정보</string>
     <string name="add_routine">루틴 추가</string>
+    <string name="history">운동 기록</string>
 </resources>

@@ -25,6 +25,7 @@
         <activity android:name=".view.AddRoutine"/>
         <activity android:name=".view.DietInfo" />
         <activity android:name=".view.FitnessInfo"/>
+        <activity android:name=".view.History"/>
     </application>
 
 </manifest>

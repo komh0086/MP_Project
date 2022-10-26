@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MP_Project/app/src/main/res/drawable/routine_card_bg.xml" value="0.1395" />
+        <entry key="..\:/MP_Project/app/src/main/res/drawable/user_img.xml" value="0.133" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_info.xml" value="0.25364583333333335" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/history.xml" value="0.2526041666666667" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/my_info.xml" value="0.2427536231884058" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/routine_card.xml" value="0.2427536231884058" />
       </map>
     </option>
   </component>

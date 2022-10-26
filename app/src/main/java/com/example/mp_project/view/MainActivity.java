@@ -2,6 +2,7 @@ package com.example.mp_project.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ import com.example.mp_project.view.component.RoutineCard;
 public class MainActivity extends AppCompatActivity {
     public static Context mycontext;
     ImageButton Btn_myInfo;
-    Button Btn_addRoutine, Btn_dietInfo, Btn_fitnessInfo;
+    Button Btn_addRoutine, Btn_dietInfo, Btn_fitnessInfo, Btn_history;
     LinearLayout routine_card_layout;
     LayoutInflater mInflater;
     @Override
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Btn_dietInfo = (Button) findViewById(R.id.Btn_diet);
         Btn_addRoutine = (Button) findViewById(R.id.Btn_addRoutine);
         Btn_myInfo = (ImageButton) findViewById(R.id.Btn_myInfo);
+        Btn_history = (Button) findViewById(R.id.Btn_history);
         routine_card_layout = (LinearLayout) findViewById(R.id.routine_card_layout);
     }
 
@@ -57,13 +59,22 @@ public class MainActivity extends AppCompatActivity {
         Btn_myInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                System.exit(0);
+                Dialog dialog = new Dialog(MainActivity.this);
+                dialog.setContentView(R.layout.my_info);
+                dialog.show();
             }
         });
         Btn_addRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), AddRoutine.class);
+                startActivity(intent);
+            }
+        });
+        Btn_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), History.class);
                 startActivity(intent);
             }
         });

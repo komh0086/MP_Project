@@ -3,7 +3,6 @@ package com.example.mp_project.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,20 +10,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.mp_project.R;
-import com.example.mp_project.domain.routine.RoutineDAO;
-import com.example.mp_project.domain.routine.RoutineDB;
-import com.example.mp_project.domain.routine.RoutineEntity;
 import com.example.mp_project.view.component.RoutineCard;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
-    public static Context mycontext;
+
+    DatabaseReference RootRef = FirebaseDatabase.getInstance().getReference();
+
     ImageButton Btn_myInfo;
     Button Btn_addRoutine, Btn_dietInfo, Btn_fitnessInfo, Btn_history;
     LinearLayout routine_card_layout;
     LayoutInflater mInflater;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void init(){
         mInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        mycontext = this;
     }
 
     private void find(){

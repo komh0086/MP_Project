@@ -49,9 +49,9 @@ public class RoutineAdapter extends BaseAdapter {
 
         Routine_component routine_component = data.get(position);
 
-        name.setText(routine_component.get_name());
-        set.setText(routine_component.get_set());
-        count.setText(routine_component.get_count());
+        name.setText(routine_component.getName());
+        set.setText(routine_component.getSet());
+        count.setText(routine_component.getCount());
 
         return view;
     }

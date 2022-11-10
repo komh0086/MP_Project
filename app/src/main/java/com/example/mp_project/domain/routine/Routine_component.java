@@ -1,5 +1,8 @@
 package com.example.mp_project.domain.routine;
 
+import com.google.firebase.database.IgnoreExtraProperties;
+
+@IgnoreExtraProperties
 public class Routine_component {
     String fitness_name;
     String set, count;
@@ -14,15 +17,15 @@ public class Routine_component {
         new Routine_component("default", "0", "0");
     }
 
-    public String get_name(){
+    public String getName(){
         return fitness_name;
     }
 
-    public String get_set(){
+    public String getSet(){
         return set;
     }
 
-    public String get_count(){
+    public String getCount(){
         return count;
     }
 }

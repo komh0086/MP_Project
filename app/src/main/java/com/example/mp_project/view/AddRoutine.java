@@ -75,9 +75,11 @@ public class AddRoutine  extends AppCompatActivity {
                 String input_count = routine_count.getText().toString();
                 String input_name = routine_name.getText().toString();
                 if (input_name.getBytes().length > 0 && input_count.getBytes().length > 0 && input_set.getBytes().length > 0) {
-                    routineAddService.Save_Routine(routine_title.getText().toString(), routine_data);
                     routine_data.add(new Routine_component(input_name, input_set, input_count));
                     adapter.notifyDataSetChanged();
+                    routine_set.setText("");
+                    routine_count.setText("");
+                    routine_name.setText("");
                     Toast.makeText(getApplicationContext(), "운동이 추가되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "잘못된 입력입니다!", Toast.LENGTH_SHORT).show();
@@ -87,6 +89,7 @@ public class AddRoutine  extends AppCompatActivity {
         btn_saveRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                routineAddService.Save_Routine(routine_title.getText().toString(), routine_data);
                 finish();
             }
         });

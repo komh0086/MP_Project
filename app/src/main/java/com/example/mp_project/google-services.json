@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "990263913863",
+    "firebase_url": "https://fitness-potential-default-rtdb.firebaseio.com",
     "project_id": "fitness-potential",
     "storage_bucket": "fitness-potential.appspot.com"
   },

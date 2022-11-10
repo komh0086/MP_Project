@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="UserID">18101188</string>
+    <string name="UserName">고민혁</string>
+    <string name="UserGender">남</string>
+    <string name="UserAge">23</string>
+    <string name="UserHeight">182</string>
+    <string name="UserWeight">88</string>
 </resources>

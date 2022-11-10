@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class RoutineAdapter extends BaseAdapter {
 
-    private ArrayList<Routine_component> data;
+    private ArrayList<RoutineEntity> data;
 
-    public RoutineAdapter(ArrayList<Routine_component> routine_data) {
+    public RoutineAdapter(ArrayList<RoutineEntity> routine_data) {
         this.data = routine_data;
     }
 
@@ -47,7 +47,7 @@ public class RoutineAdapter extends BaseAdapter {
         TextView set = (TextView) view.findViewById(R.id.routine_card_fit_set);
         TextView count = (TextView) view.findViewById(R.id.routine_card_fit_count);
 
-        Routine_component routine_component = data.get(position);
+        RoutineEntity routine_component = data.get(position);
 
         name.setText(routine_component.getName());
         set.setText(routine_component.getSet());
@@ -56,7 +56,7 @@ public class RoutineAdapter extends BaseAdapter {
         return view;
     }
     public void add_routine_fit(String name, String set, String count){
-        Routine_component item = new Routine_component(name, set, count);
+        RoutineEntity item = new RoutineEntity(name, set, count);
         data.add(item);
     }
     public void delete_routine_fit(int position){

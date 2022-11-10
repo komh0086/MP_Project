@@ -30,7 +30,7 @@ public class RoutineAddService {
                 .child(String.valueOf(R.string.UserID)).child("routines").child(name);
     }
 
-    public void Save_Routine(String name, ArrayList<Routine_component> routines){
+    public void Save_Routine(String name, ArrayList<RoutineEntity> routines){
         init(name);
         for(int i=0;i<routines.size();i++){
             routineRef.child(Integer.toString(i+1)).setValue(routines.get(i));

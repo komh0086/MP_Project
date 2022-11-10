@@ -3,25 +3,18 @@ package com.example.mp_project.view;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.mp_project.R;
 import com.example.mp_project.domain.routine.RoutineAdapter;
 import com.example.mp_project.domain.routine.RoutineAddService;
-import com.example.mp_project.domain.routine.Routine_component;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+import com.example.mp_project.domain.routine.RoutineEntity;
 
 import java.util.ArrayList;
 
@@ -33,7 +26,7 @@ public class AddRoutine  extends AppCompatActivity {
     EditText routine_name, routine_set, routine_count, routine_title;
     Button btn_addFitness, btn_saveRoutine;
     ListView fitness_array;
-    ArrayList<Routine_component> routine_data;
+    ArrayList<RoutineEntity> routine_data;
     RoutineAdapter adapter;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +49,7 @@ public class AddRoutine  extends AppCompatActivity {
     }
 
     private void init(){
-        routine_data = new ArrayList<Routine_component>();
+        routine_data = new ArrayList<RoutineEntity>();
         adapter = new RoutineAdapter(routine_data);
         fitness_array.setAdapter(adapter);
     }
@@ -75,7 +68,7 @@ public class AddRoutine  extends AppCompatActivity {
                 String input_count = routine_count.getText().toString();
                 String input_name = routine_name.getText().toString();
                 if (input_name.getBytes().length > 0 && input_count.getBytes().length > 0 && input_set.getBytes().length > 0) {
-                    routine_data.add(new Routine_component(input_name, input_set, input_count));
+                    routine_data.add(new RoutineEntity(input_name, input_set, input_count));
                     adapter.notifyDataSetChanged();
                     routine_set.setText("");
                     routine_count.setText("");

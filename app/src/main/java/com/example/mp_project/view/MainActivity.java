@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.mp_project.R;
+import com.example.mp_project.view.component.MyInfo;
 import com.example.mp_project.view.component.RoutineCard;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Btn_myInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dialog dialog = new Dialog(MainActivity.this);
+                MyInfo dialog = new MyInfo(MainActivity.this);
                 dialog.setContentView(R.layout.my_info);
                 dialog.show();
             }

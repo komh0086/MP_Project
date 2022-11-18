@@ -4,8 +4,8 @@ import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
 public class RoutineEntity {
-    String fitness_name;
-    String set, count;
+    private String fitness_name;
+    private String set, count;
 
     public RoutineEntity(String name, String set, String count){
         this.fitness_name = name;

@@ -25,7 +25,7 @@ public class DietInfo extends AppCompatActivity {
     }
 
     private void find(){
-        Btn_goback = (ImageButton) findViewById(R.id.Btn_goback);
+        Btn_goback = (ImageButton) findViewById(R.id.DietInfo_goback);
         search_diet = (EditText) findViewById(R.id.search_diet);
     }
 

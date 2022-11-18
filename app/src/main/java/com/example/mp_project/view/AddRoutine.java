@@ -20,14 +20,14 @@ import java.util.ArrayList;
 
 public class AddRoutine  extends AppCompatActivity {
 
-    RoutineAddService routineAddService = RoutineAddService.getInstance();
+    private static RoutineAddService routineAddService = RoutineAddService.getInstance();
 
-    ImageButton btn_goback;
-    EditText routine_name, routine_set, routine_count, routine_title;
-    Button btn_addFitness, btn_saveRoutine;
-    ListView fitness_array;
-    ArrayList<RoutineEntity> routine_data;
-    RoutineAdapter adapter;
+    private ImageButton btn_goback;
+    private EditText routine_name, routine_set, routine_count, routine_title;
+    private Button btn_addFitness, btn_saveRoutine;
+    private ListView fitness_array;
+    private ArrayList<RoutineEntity> routine_data;
+    private RoutineAdapter adapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +38,14 @@ public class AddRoutine  extends AppCompatActivity {
     }
 
     private void find(){
-        btn_goback = (ImageButton) findViewById(R.id.btn_goback_addroutine);
+        btn_goback = (ImageButton) findViewById(R.id.AddRoutine_goback);
         fitness_array = (ListView) findViewById(R.id.add_fitness_array);
         routine_title = (EditText) findViewById(R.id.add_routine_title);
-        routine_name = (EditText) findViewById(R.id.add_fitness_name);
-        routine_set = (EditText) findViewById(R.id.routine_set);
-        routine_count  = (EditText) findViewById(R.id.routine_count);
-        btn_addFitness = (Button) findViewById(R.id.btn_addFitness);
-        btn_saveRoutine = (Button) findViewById(R.id.btn_saveRoutine);
+        routine_name = (EditText) findViewById(R.id.AddRoutine_fitness_name);
+        routine_set = (EditText) findViewById(R.id.AddRoutine_sets);
+        routine_count  = (EditText) findViewById(R.id.AddRoutine_reps);
+        btn_addFitness = (Button) findViewById(R.id.AddRoutine_btn_add_routine);
+        btn_saveRoutine = (Button) findViewById(R.id.AddRoutine_save_routine);
     }
 
     private void init(){

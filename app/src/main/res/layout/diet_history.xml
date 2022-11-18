@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/root_background">
     <LinearLayout
         android:layout_width="match_parent"
@@ -10,7 +9,7 @@
         android:orientation="horizontal"
         android:layout_margin="10dp">
         <ImageButton
-            android:id="@+id/DietInfo_goback"
+            android:id="@+id/DietHistory_goback"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/back_icon_vector"
@@ -24,16 +23,6 @@
             android:layout_weight="30"
             android:layout_gravity="center"
             android:textSize="20dp"
-            android:text="식단 정보" />
+            android:text="식단 기록" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/search_diet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/search_bar_bg"
-        android:minHeight="20dp"
-        android:padding="3dp"
-        android:singleLine="true" />
 </LinearLayout>

@@ -26,14 +26,27 @@
             android:textSize="20dp"
             android:text="식단 정보" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/search_diet"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/DietInfo_majorCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <Spinner
+            android:id="@+id/DietInfo_detailedCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="search"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/search_bar_bg"
-        android:minHeight="20dp"
-        android:padding="3dp"
-        android:singleLine="true" />
+        android:id="@+id/DietInfo_searchResult"/>
 </LinearLayout>

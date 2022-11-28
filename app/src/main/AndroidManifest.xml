@@ -26,6 +26,9 @@
         <activity android:name=".view.DietInfo" />
         <activity android:name=".view.FitnessInfo"/>
         <activity android:name=".view.History"/>
+        <activity android:name=".view.Login"/>
+        <activity android:name=".view.Community"/>
+        <activity android:name=".view.DietHistory"/>
     </application>
 
 </manifest>

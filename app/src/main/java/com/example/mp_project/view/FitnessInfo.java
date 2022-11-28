@@ -29,7 +29,7 @@ public class FitnessInfo extends AppCompatActivity {
     }
 
     private void find(){
-        Btn_goback = (ImageButton) findViewById(R.id.btn_goback);
+        Btn_goback = (ImageButton) findViewById(R.id.FitnessInfo_goback);
         Btn_chest = (Button) findViewById(R.id.Btn_chest);
         Btn_back= (Button) findViewById(R.id.Btn_back);
         Btn_shoulder= (Button) findViewById(R.id.Btn_shoulder);

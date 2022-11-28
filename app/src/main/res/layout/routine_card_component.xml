@@ -32,6 +32,7 @@
             android:id="@+id/routine_card_fit_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="10dp" />
+            android:textSize="10dp"
+            android:text="asdfasdf"/>
     </LinearLayout>
 </LinearLayout>

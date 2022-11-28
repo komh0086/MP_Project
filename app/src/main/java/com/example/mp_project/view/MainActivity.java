@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.example.mp_project.R;
+import com.example.mp_project.view.component.MyInfo;
 import com.example.mp_project.view.component.RoutineCard;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseReference RootRef = FirebaseDatabase.getInstance().getReference();
 
     ImageButton Btn_myInfo;
-    Button Btn_addRoutine, Btn_dietInfo, Btn_fitnessInfo, Btn_history;
+    Button Btn_addRoutine, Btn_dietInfo, Btn_fitnessInfo, Btn_history, Btn_community, Btn_dietHistory;
     LinearLayout routine_card_layout;
     LayoutInflater mInflater;
 
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         Btn_addRoutine = (Button) findViewById(R.id.Btn_addRoutine);
         Btn_myInfo = (ImageButton) findViewById(R.id.Btn_myInfo);
         Btn_history = (Button) findViewById(R.id.Btn_history);
+        Btn_community = (Button) findViewById(R.id.Btn_community);
+        Btn_dietHistory = (Button) findViewById(R.id.Btn_diet_history);
         routine_card_layout = (LinearLayout) findViewById(R.id.routine_card_layout);
     }
 
@@ -58,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         Btn_myInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Dialog dialog = new Dialog(MainActivity.this);
+                MyInfo dialog = new MyInfo(MainActivity.this);
                 dialog.setContentView(R.layout.my_info);
                 dialog.show();
             }
@@ -81,6 +84,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), DietInfo.class);
+                startActivity(intent);
+            }
+        });
+        Btn_community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Community.class);
+                startActivity(intent);
+            }
+        });
+        Btn_dietHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), DietHistory.class);
                 startActivity(intent);
             }
         });

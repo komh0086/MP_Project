@@ -29,7 +29,7 @@ public class History extends AppCompatActivity {
     }
 
     private void find(){
-        Btn_goback = (ImageButton) findViewById(R.id.btn_goback_history);
+        Btn_goback = (ImageButton) findViewById(R.id.History_goback);
         history_calendar = (CalendarView) findViewById(R.id.history_calendar);
         routine_name = (TextView) findViewById(R.id.history_routine_name);
         routine_list = (ListView) findViewById(R.id.history_fitness_list);

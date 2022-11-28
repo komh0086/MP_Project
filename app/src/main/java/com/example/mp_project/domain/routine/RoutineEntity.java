@@ -1,19 +1,31 @@
 package com.example.mp_project.domain.routine;
 
-import androidx.annotation.NonNull;
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import com.google.firebase.database.IgnoreExtraProperties;
 
-@Entity
+@IgnoreExtraProperties
 public class RoutineEntity {
-    @NonNull
-    @PrimaryKey
-    public int index;
+    private String fitness_name;
+    private String set, count;
 
-    @ColumnInfo(name = "routine_name")
-    public String routine_name;
+    public RoutineEntity(String name, String set, String count){
+        this.fitness_name = name;
+        this.set = set;
+        this.count = count;
+    }
 
-    @ColumnInfo(name = "fitness_array")
-    public String fitness_array;
+    public RoutineEntity(){
+        new RoutineEntity("default", "0", "0");
+    }
+
+    public String getName(){
+        return fitness_name;
+    }
+
+    public String getSet(){
+        return set;
+    }
+
+    public String getCount(){
+        return count;
+    }
 }

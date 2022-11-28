@@ -20,7 +20,7 @@
             android:layout_weight="20"
             android:layout_margin="10dp"
             android:minHeight="48dp"
-            android:text="Fitness Potential"
+            android:text="@string/app_name"
             android:gravity="center"
             android:textAlignment="center"
             android:textSize="20dp"
@@ -73,10 +73,25 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Btn_diet"
+            android:id="@+id/Btn_community"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_selector"
+            android:elevation="100dp"
+            android:padding="40dp"
+            android:text="게시판"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_diet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
@@ -127,6 +142,20 @@
             android:background="@drawable/button_selector"
             android:padding="40dp"
             android:text="운동 기록"
+            android:textColor="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/Btn_diet_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowWeight="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_selector"
+            android:padding="40dp"
+            android:text="식단 기록"
             android:textColor="@color/black" />
     </GridLayout>
 

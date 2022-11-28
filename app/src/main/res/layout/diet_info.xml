@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/root_background">
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,21 +31,26 @@
         <Spinner
             android:id="@+id/DietInfo_majorCategory"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="5"/>
         <Spinner
             android:id="@+id/DietInfo_detailedCategory"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
             android:layout_weight="5"/>
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search_diet"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_selector"
             android:text="search"
             android:layout_weight="1"/>
     </LinearLayout>
     <ListView
+        android:id="@+id/DietInfo_ListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/DietInfo_searchResult"/>
+        android:layout_height="wrap_content"/>
 </LinearLayout>

@@ -2,9 +2,11 @@ package com.example.mp_project.view;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,15 +16,15 @@ import com.example.mp_project.R;
 
 import java.util.Date;
 
-public class History extends AppCompatActivity {
+public class FitnessHistory extends AppCompatActivity {
     ImageButton Btn_goback;
-    CalendarView history_calendar;
-    TextView routine_name;
-    ListView routine_list;
+    Spinner Year, Month, Day;
+    Button Search;
+    ListView FitnessDiary_ListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.history);
+        setContentView(R.layout.fitness_diary);
         find();
         init();
         setListener();
@@ -30,9 +32,10 @@ public class History extends AppCompatActivity {
 
     private void find(){
         Btn_goback = (ImageButton) findViewById(R.id.History_goback);
-        history_calendar = (CalendarView) findViewById(R.id.history_calendar);
-        routine_name = (TextView) findViewById(R.id.history_routine_name);
-        routine_list = (ListView) findViewById(R.id.history_fitness_list);
+        Year = (Spinner) findViewById(R.id.fitness_diary_year);
+        Month = (Spinner) findViewById(R.id.fitness_diary_month);
+        Day = (Spinner) findViewById(R.id.fitness_diary_day);
+        Search = (Button) findViewById(R.id.fitness_diary_search);
     }
     private void init(){
     }
@@ -43,8 +46,11 @@ public class History extends AppCompatActivity {
                 finish();
             }
         });
-    }
-    private void checkDay(int year, int month, int day){
+        Search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
     }
 }

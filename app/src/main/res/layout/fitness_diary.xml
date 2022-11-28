@@ -25,27 +25,42 @@
             android:text="@string/history"
             android:textSize="20sp" />
     </LinearLayout>
-    <CalendarView
-        android:id="@+id/history_calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
-    <TextView
-        android:layout_margin="10dp"
-        android:id="@+id/history_routine_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="루틴 이름"
-        android:textSize="20dp"/>
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/fitness_diary_year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="5"/>
+        <Spinner
+            android:id="@+id/fitness_diary_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="5"/>
+
+        <Spinner
+            android:id="@+id/fitness_diary_day"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fitness_diary_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="search"
+            android:background="@drawable/button_selector"
+            android:layout_weight="1"/>
+    </LinearLayout>
     <ListView
-        android:id="@+id/history_fitness_list"
+        android:id="@+id/fitness_diary_listView"
         android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    </LinearLayout>
 
 </LinearLayout>

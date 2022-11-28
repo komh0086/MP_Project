@@ -1,5 +1,6 @@
 package com.example.mp_project.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -7,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,16 +20,17 @@ import com.example.mp_project.domain.routine.RoutineEntity;
 
 import java.util.ArrayList;
 
-public class AddRoutine  extends AppCompatActivity {
+public class AddRoutine extends AppCompatActivity {
 
     private static RoutineAddService routineAddService = RoutineAddService.getInstance();
 
     private ImageButton btn_goback;
-    private EditText routine_name, routine_set, routine_count, routine_title;
+    private TextView routine_title;
     private Button btn_addFitness, btn_saveRoutine;
     private ListView fitness_array;
     private ArrayList<RoutineEntity> routine_data;
     private RoutineAdapter adapter;
+    private Intent intent;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,18 +43,17 @@ public class AddRoutine  extends AppCompatActivity {
     private void find(){
         btn_goback = (ImageButton) findViewById(R.id.AddRoutine_goback);
         fitness_array = (ListView) findViewById(R.id.add_fitness_array);
-        routine_title = (EditText) findViewById(R.id.add_routine_title);
-        routine_name = (EditText) findViewById(R.id.AddRoutine_fitness_name);
-        routine_set = (EditText) findViewById(R.id.AddRoutine_sets);
-        routine_count  = (EditText) findViewById(R.id.AddRoutine_reps);
+        routine_title = (TextView) findViewById(R.id.add_routine_title);
         btn_addFitness = (Button) findViewById(R.id.AddRoutine_btn_add_routine);
         btn_saveRoutine = (Button) findViewById(R.id.AddRoutine_save_routine);
     }
 
-    private void init(){
+    private void init(){//fitness_title 초기화 필요 제목 입력하는 화면에서 값 받아오기
         routine_data = new ArrayList<RoutineEntity>();
         adapter = new RoutineAdapter(routine_data);
         fitness_array.setAdapter(adapter);
+        intent = getIntent();
+        routine_title.setText(intent.getStringExtra("RoutineTitle"));
     }
 
     private void setListener() {
@@ -64,26 +66,13 @@ public class AddRoutine  extends AppCompatActivity {
         btn_addFitness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String input_set = routine_set.getText().toString();
-                String input_count = routine_count.getText().toString();
-                String input_name = routine_name.getText().toString();
-                if (input_name.getBytes().length > 0 && input_count.getBytes().length > 0 && input_set.getBytes().length > 0) {
-                    routine_data.add(new RoutineEntity(input_name, input_set, input_count));
-                    adapter.notifyDataSetChanged();
-                    routine_set.setText("");
-                    routine_count.setText("");
-                    routine_name.setText("");
-                    Toast.makeText(getApplicationContext(), "운동이 추가되었습니다.", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(getApplicationContext(), "잘못된 입력입니다!", Toast.LENGTH_SHORT).show();
-                }
+
             }
         });
         btn_saveRoutine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                routineAddService.Save_Routine(routine_title.getText().toString(), routine_data);
-                finish();
+
             }
         });
 

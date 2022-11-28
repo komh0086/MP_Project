@@ -26,17 +26,6 @@
             android:textSize="20dp"
             android:textStyle="bold"/>
 
-        <ImageButton
-            android:id="@+id/Btn_myInfo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:focusableInTouchMode="true"
-            android:src="@drawable/user_img"
-            android:backgroundTint="#00000000"
-            android:scaleType="centerCrop"
-            android:padding="0sp"/>
-
     </LinearLayout>
 
     <HorizontalScrollView
@@ -88,7 +77,7 @@
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Btn_diet"
+            android:id="@+id/Btn_diet_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"
@@ -131,7 +120,7 @@
             android:textColor="@color/black" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/Btn_history"
+            android:id="@+id/Btn_fitness_history"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"

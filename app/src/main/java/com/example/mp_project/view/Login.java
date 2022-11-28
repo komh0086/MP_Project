@@ -12,7 +12,7 @@ import com.example.mp_project.R;
 public class Login extends AppCompatActivity {
 
     EditText ID, PW;
-    Button Login_Btn;
+    Button Login_Btn, Login_kakao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +30,17 @@ public class Login extends AppCompatActivity {
         ID = (EditText) findViewById(R.id.Login_ID);
         PW = (EditText) findViewById(R.id.Login_PW);
         Login_Btn = (Button) findViewById(R.id.Btn_login);
+        Login_kakao = (Button) findViewById(R.id.login_Btn_kakao);
     }
 
     private void setListener(){
         Login_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+        Login_kakao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

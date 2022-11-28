@@ -8,14 +8,29 @@
         <entry key="..\:/MP_Project/app/src/main/res/drawable/button_selector.xml" value="0.1345" />
         <entry key="..\:/MP_Project/app/src/main/res/drawable/fitness_selector.xml" value="0.1345" />
         <entry key="..\:/MP_Project/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1345" />
+        <entry key="..\:/MP_Project/app/src/main/res/drawable/rectangle.xml" value="0.1865" />
         <entry key="..\:/MP_Project/app/src/main/res/drawable/routine_card_bg.xml" value="0.1395" />
         <entry key="..\:/MP_Project/app/src/main/res/drawable/search_bar_bg.xml" value="0.1345" />
         <entry key="..\:/MP_Project/app/src/main/res/drawable/user_img.xml" value="0.133" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/add_routine.xml" value="0.23641304347826086" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/add_routine_title.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/community.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/community_component.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/community_index_view.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/diet_history.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/diet_history_index_view.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/diet_history_listview.xml" value="0.23867753623188406" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/diet_info.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/diet_info_index_view.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_diary.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_diary_index_view.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_diary_listview.xml" value="0.6" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_info.xml" value="0.25364583333333335" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_info_index_view.xml" value="0.23867753623188406" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/fitness_info_listview.xml" value="0.20811965811965813" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/history.xml" value="0.2526041666666667" />
+        <entry key="..\:/MP_Project/app/src/main/res/layout/listview_layout.xml" value="0.23867753623188406" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/login.xml" value="0.23867753623188406" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/my_info.xml" value="0.2" />
         <entry key="..\:/MP_Project/app/src/main/res/layout/rank.xml" value="0.23867753623188406" />

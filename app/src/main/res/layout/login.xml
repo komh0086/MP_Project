@@ -32,4 +32,12 @@
         android:text="Login"
         android:background="@drawable/button_selector"
         android:id="@+id/Btn_login"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/login_Btn_kakao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/kakao"
+        android:textStyle="bold"
+        android:text="kakao"/>
 </LinearLayout>

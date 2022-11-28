@@ -46,15 +46,11 @@ public class CommunityAdapter extends BaseAdapter {
         }
         TextView title = (TextView) view.findViewById(R.id.Community_title);
         TextView views = (TextView) view.findViewById(R.id.views);
-        TextView likes = (TextView) view.findViewById(R.id.likes);
-        TextView hates = (TextView) view.findViewById(R.id.hates);
 
         CommunitySummaryEntity community_component = data.get(position);
 
         title.setText(community_component.getTitle());
         views.setText(community_component.getViews().toString());
-        likes.setText(community_component.getLikes().toString());
-        hates.setText(community_component.getHates().toString());
 
         return view;
     }

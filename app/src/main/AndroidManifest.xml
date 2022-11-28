@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mp_project">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,12 +26,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.AddRoutine"/>
-        <activity android:name=".view.DietInfo" />
-        <activity android:name=".view.FitnessInfo"/>
-        <activity android:name=".view.History"/>
-        <activity android:name=".view.Login"/>
+        <activity android:name=".view.AddRoutineTitle"/>
         <activity android:name=".view.Community"/>
+        <activity android:name=".view.CommunityIndex"/>
         <activity android:name=".view.DietHistory"/>
+        <activity android:name=".view.DietHistoryIndex"/>
+        <activity android:name=".view.DietInfo"/>
+        <activity android:name=".view.DietInfoIndex"/>
+        <activity android:name=".view.FitnessHistory"/>
+        <activity android:name=".view.FitnessInfo"/>
+        <activity android:name=".view.Login"/>
     </application>
 
 </manifest>

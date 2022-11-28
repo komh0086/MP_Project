@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/root_background"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +24,39 @@
             android:layout_gravity="center"
             android:textSize="20dp"
             android:text="식단 기록" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/diet_diary_year"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="5"/>
+        <Spinner
+            android:id="@+id/diet_diary_month"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="5"/>
+
+        <Spinner
+            android:id="@+id/diet_diary_day"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:layout_weight="5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/diet_diary_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="search"
+            android:background="@drawable/button_selector"
+            android:layout_weight="1"/>
     </LinearLayout>
     <ListView
         android:layout_width="match_parent"
